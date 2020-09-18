@@ -1,0 +1,340 @@
+:root {
+    --primary: #ddd;
+    --pink: #FF7BAD;
+}
+html, body {
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+    background-color: white;
+    margin: 0 auto;
+    height: 100%;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.sidebar {
+    position: fixed;
+    left: -100vw;
+    grid-area: sidebar;
+    background-color: white;
+    text-align: center;
+    width: 25vw;
+    height: 100%;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 1s;
+}
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+@keyframes slide {
+    100% { left: 0; }
+}
+.sidebar img {
+    width: 80%;
+    margin: 4vh auto;
+}
+.main-nav {
+    text-align: center;
+    justify-content: center;
+}
+.main-nav ul {
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 2vw;
+}
+.main-nav ul li {
+    margin-top: 2em;
+    margin-right: 2em;
+}
+li a {
+    color: grey;
+    text-decoration: none;
+}
+li a:hover {
+    color: var(--pink);
+    font-weight: 500;
+}
+li a:active {
+    color: var(--pink);
+    font-weight: 500;
+}
+.line {
+    border-top: 1px solid;
+    margin: 2em;
+    opacity: .1;
+}
+.line-package {
+    border-top: 1px white solid;
+    margin: 2em;
+}
+.social-icon {
+    margin-top: -1em;
+    margin-bottom: 2em;
+}
+.social-icon li {
+    display: inline-block;
+    margin-right: 1em;
+}
+.fa-facebook {
+    color: #3C5A99;
+}
+.fa-instagram {
+    color: #E1306C;
+}
+.sidebar h3 {
+    font-family: Great Vibes;
+    margin: 3em 1em;
+    font-size: 24px;
+    color: var(--pink);
+}
+.main-nav .image-fly {
+    width: 60%;
+    height: 100%;
+    opacity: 0.3;
+}
+.content {
+    grid-area: content;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    background-image: url("../img/bg-1.jpg");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    transition: background 2s;
+    -webkit-transition: background 2s;
+    -moz-transition: background 2s;
+    -o-transition: background 2s;
+}
+.content-portfolio {
+    width: 100%;
+    height: 100%;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
+    text-align: center;
+    justify-items: center;
+}
+.content-portfolio h1 {
+    font-family: Great Vibes;
+    color: var(--pink);
+    margin-top: 3em;
+}
+.content-portfolio p {
+    color: grey;
+    font-weight: 100;
+    margin: 1em;
+}
+.content-portfolio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+    'sidebar content';
+    grid-template-columns: 25vw auto;
+    grid-template-rows: auto, 1fr;
+
+}
+.content-offers {
+    width: 100%;
+    height: 100%;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+}
+.content-offers-contact {
+    width: 100%;
+    height: 100vh;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+    background-image: url("../img/portfolio/41.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.content-offers h1 {
+    font-family: Great Vibes;
+    font-size: 2em;
+    color: var(--pink);
+}
+.content-offers h2 {
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.content-offers p {
+    font-size: 14px;
+    color: grey;
+}
+.content-offers h3 {
+    font-size: 16px;
+    color: var(--pink);
+}
+.content-offers-contact h1 {
+    font-family: Great Vibes;
+    font-size: 2em;
+    color: var(--pink);
+}
+.content-offers-contact h2 {
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.content-offers-contact p {
+    font-size: 14px;
+    color: grey;
+}
+.content-offers-contact h3 {
+    font-size: 16px;
+    color: var(--pink);
+}
+.article {
+    grid-column: 1 / 4;
+    margin: 1em;
+}
+.article-contact {
+    grid-column: 1 / 4;
+    height: 40vh;
+    margin-top: 30vh;
+    text-align: center;
+    background-color:rgba(255,255,255, .9);
+}
+#first-photo {
+    grid-column: 1 / 1;
+}
+#second-photo {
+    grid-column: 2 / 2;
+}
+#third-photo {
+    grid-column: 3 / 3;
+}
+#full-photo {
+    grid-column: 1 / 4;
+}
+.first-package {
+    grid-column: 1 / 1;
+    background-color: #ffe8f0;
+    text-align: center;
+}
+.first-package h1 {
+    font-family: Great Vibes;
+    font-size: 2em;
+    color: var(--pink);
+}
+.first-package h2 {
+    font-size: 1em;
+    color: grey;
+    margin-top: -1em;
+}
+.second-package {
+    grid-column: 2 / 2;
+    background-color: #ffe8f0;
+    text-align: center;
+}
+.second-package h1 {
+    font-family: Great Vibes;
+    font-size: 2em;
+    color: var(--pink);
+}
+.second-package h2 {
+    font-size: 1em;
+    color: grey;
+    margin-top: -1em;
+}
+.third-package {
+    grid-column: 3 / 3;
+    background-color: #ffe8f0;
+    text-align: center;
+}
+.third-package h1 {
+    font-family: Great Vibes;
+    font-size: 2em;
+    color: var(--pink);
+}
+.third-package h2 {
+    font-size: 1em;
+    color: grey;
+    margin-top: -1em;
+}
+.parameters li {
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 2em;
+}
+@media (max-width: 667px) {
+    .article-contact {
+        height: 50vh;
+    }
+    .container {
+        grid-template-areas:
+        'sidebar'
+        'content';
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        position: relative;
+        width: 100%;
+    }
+    .main-nav ul li{
+        display: inline-block;
+    }
+    .content-offers {
+        grid-template-columns: 1fr;
+    }
+    .first-package {
+        grid-column: 1 / 1;
+    }
+    .second-package {
+        grid-column: 1 / 1;
+    }
+    .third-package {
+        grid-column: 1 / 1;
+    }
+    #first-photo {
+        grid-column: 1 / 1;
+    }
+    #second-photo {
+        grid-column: 1 / 1;
+    }
+    #third-photo {
+        grid-column: 1 / 1;
+    }
+}
+@media (min-width: 667px and max-width: 1280px)  {
+    .container {
+        grid-template-areas:
+        'sidebar'
+        'content';
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        position: relative;
+        width: 100%;
+    }
+    .main-nav ul li{
+        display: inline-block;
+    }
+    .article-contact {
+        height: 30vh;
+    }
+}
+@media (min-width: 1280px)  {
+    .content-portfolio h1 {
+        margin-top: 5em;
+    }
+}
